@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./side-bar-contacts.component.css']
 })
 export class SideBarContactsComponent {
-
+  showFiller = false
 }
