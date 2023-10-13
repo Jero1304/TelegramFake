@@ -4,10 +4,15 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SideBarContactsComponent } from './componenti/side-bar-contacts/side-bar-contacts.component';
+import { MainChatComponent } from './componenti/main-chat/main-chat.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SideBarContactsComponent,
+    MainChatComponent,
+
   ],
   imports: [
     BrowserModule,
