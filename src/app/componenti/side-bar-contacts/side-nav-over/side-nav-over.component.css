@@ -1,0 +1,43 @@
+ul,li{
+    list-style: none;
+    padding: 0;
+}
+.side-over{
+    padding: 10px;
+}
+.info-profilo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    gap: 20px;
+    background-color: aqua;
+
+}
+.foto-profilo{
+    border-radius: 100%;
+    max-width: 20%;
+}
+.info >*{
+    margin-bottom: 4px;
+}
+.settings{
+    margin-top: 20px;
+    background-color:cadetblue;
+}
+.settings li{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: row;
+    gap: 4px;
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+li p{
+    margin: 0;
+}
+.settings mat-icon{
+    font-size: 35px;
+    padding: 0 14px 10px 0;
+}
