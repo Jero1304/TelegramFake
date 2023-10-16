@@ -30,6 +30,28 @@
     margin-bottom: -22px;
     width: 100%;
     margin-right: 10px;
-
+    
   }
   
+  .search {
+    display: flex;
+    align-items: center;
+    margin-right: 8px;
+  }
+  
+  .search-bar-align{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+  }
+
+  .close-btn{
+    padding:12px 8px 8px 8px;
+    position: absolute;
+    right: 0;
+  }
+
+  .input-bar{
+    display: flex;
+    align-items: center;
+  }
