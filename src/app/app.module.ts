@@ -17,6 +17,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 import { SideNavOverComponent } from './componenti/side-bar-contacts/side-nav-over/side-nav-over.component';
 import { ContactComponent } from './componenti/side-bar-contacts/contact/contact.component';
+import { ContactInfoComponent } from './componenti/main-chat/contact-info/contact-info.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,6 +25,7 @@ import { ContactComponent } from './componenti/side-bar-contacts/contact/contact
     MainChatComponent,
     SideNavOverComponent,
     ContactComponent,
+    ContactInfoComponent,
   ],
   imports: [
     BrowserModule,
