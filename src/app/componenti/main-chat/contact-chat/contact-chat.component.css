@@ -1,0 +1,20 @@
+.messaggio {
+  padding: 10px;
+  border: 1px solid blue;
+  border-radius: 20px;
+  max-width: 60%;
+  margin: 10px;
+}
+.mex-send {
+  background-color: rgb(157, 255, 111);
+  margin-right: auto;
+  
+}
+.mex-received {
+  background-color: dodgerblue;
+  margin-left: auto;
+}
+.contact-chat{
+    display: flex;
+    flex-direction: column;
+}
