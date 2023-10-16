@@ -1,0 +1,29 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.input-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  background-color: cornflowerblue;
+  margin-bottom: 0;
+}
+.input {
+  width: 100%;
+  margin-bottom: -22px;
+  padding: 10px;
+}
+.send {
+  margin-right: 10px;
+  padding: 10px;
+  width: auto;
+  height: auto;
+  font-size: 30px;
+  background-color: aquamarine;
+  border-radius: 100%;
+  cursor: pointer;
+}

@@ -18,6 +18,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { SideNavOverComponent } from './componenti/side-bar-contacts/side-nav-over/side-nav-over.component';
 import { ContactComponent } from './componenti/side-bar-contacts/contact/contact.component';
 import { ContactInfoComponent } from './componenti/main-chat/contact-info/contact-info.component';
+import { InputMessageComponent } from './componenti/main-chat/input-message/input-message.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,6 +27,7 @@ import { ContactInfoComponent } from './componenti/main-chat/contact-info/contac
     SideNavOverComponent,
     ContactComponent,
     ContactInfoComponent,
+    InputMessageComponent,
   ],
   imports: [
     BrowserModule,
