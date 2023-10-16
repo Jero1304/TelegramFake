@@ -1,10 +1,11 @@
-<div class="contact-chat">
-  <div class="messaggio mex-send">
-    <span>mandato</span>
-  </div>
+<!-- {{currentChat.messages[0].message}} -->
 
-  <div class="messaggio mex-received">
-    <span>ricevuto</span>
+<div class="contact-chat">
+  <div
+    *ngFor="let message of currentChat.messages; index as i"
+    class="messaggio"
+    [ngClass]="message.status === 'sent' ? 'mex-send' : 'mex-received'"
+  >
+    <span>{{ message.message }}</span>
   </div>
-  
 </div>
