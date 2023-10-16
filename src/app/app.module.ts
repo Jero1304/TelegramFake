@@ -19,6 +19,7 @@ import { SideNavOverComponent } from './componenti/side-bar-contacts/side-nav-ov
 import { ContactComponent } from './componenti/side-bar-contacts/contact/contact.component';
 import { ContactInfoComponent } from './componenti/main-chat/contact-info/contact-info.component';
 import { InputMessageComponent } from './componenti/main-chat/input-message/input-message.component';
+import { ContactChatComponent } from './componenti/main-chat/contact-chat/contact-chat.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,6 +29,7 @@ import { InputMessageComponent } from './componenti/main-chat/input-message/inpu
     ContactComponent,
     ContactInfoComponent,
     InputMessageComponent,
+    ContactChatComponent,
   ],
   imports: [
     BrowserModule,
