@@ -1,0 +1,28 @@
+.contatto-card {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin: 10px 0 10px 0;
+    border-bottom: 1px solid #ccc; /* Aggiungi una linea di separazione tra le contatto-card */
+    padding-bottom: 10px; /* Aggiungi spazio tra le contatto-card */
+    width: 100%;
+  }
+  
+  .foto-profilo {
+    max-width: 75px;
+    border-radius: 100%;
+  }
+  
+  .info {
+    margin: 0 20px 10px 20px;
+  }
+  
+  .info p, .info h2 {
+    margin: 6px;
+  }
+  
+  .contatto-card:last-child {
+    border-bottom: none; /* Rimuovi la linea di separazione dall'ultima contatto-card */
+  }
+  

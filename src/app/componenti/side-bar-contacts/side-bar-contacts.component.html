@@ -1,10 +1,9 @@
 <aside>
   <mat-drawer-container class="example-container" [hasBackdrop]="true">
+    <!-- [opened]="true" per lasciare aperto -->
     <mat-drawer #drawer [mode]="'over'">
-      <!-- [opened]="true" per lasciare aperto -->
       <app-side-nav-over></app-side-nav-over>
     </mat-drawer>
-
     <mat-drawer-content #mode>
       <div class="search-bar">
         <div
@@ -44,10 +43,16 @@
             </div>
 
             
-
           </div>
         </mat-form-field>
       </div>
+
+      <div class="conatiner contacts">
+        <app-contact></app-contact>
+      </div>
+
+      
     </mat-drawer-content>
+
   </mat-drawer-container>
 </aside>

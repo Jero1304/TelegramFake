@@ -14,11 +14,17 @@ import { MatIconModule } from '@angular/material/icon';
 import { FormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import {MatSelectModule} from '@angular/material/select';
+import { MatSelectModule } from '@angular/material/select';
 import { SideNavOverComponent } from './componenti/side-bar-contacts/side-nav-over/side-nav-over.component';
-
+import { ContactComponent } from './componenti/side-bar-contacts/contact/contact.component';
 @NgModule({
-  declarations: [AppComponent, SideBarContactsComponent, MainChatComponent, SideNavOverComponent],
+  declarations: [
+    AppComponent,
+    SideBarContactsComponent,
+    MainChatComponent,
+    SideNavOverComponent,
+    ContactComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
