@@ -1,8 +1,15 @@
-<div class="input-bar">
+<form
+  #messageForm="ngForm"
+  (ngSubmit)="onSubmit(messageForm)"
+  class="input-bar"
+>
   <mat-form-field class="input">
-    <mat-label>Input</mat-label>
-    <input matInput />
+    <mat-label>Messaggio</mat-label>
+    <input matInput type="text" name="message" ngModel />
+    <!-- Cambiato il nome da "messaggio" a "message" -->
   </mat-form-field>
 
-  <mat-icon class="send">send</mat-icon>
-</div>
+  <button type="submit">
+    <mat-icon class="send">send</mat-icon>
+  </button>
+</form>
