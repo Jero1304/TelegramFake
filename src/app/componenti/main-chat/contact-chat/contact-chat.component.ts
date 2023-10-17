@@ -10,7 +10,7 @@ export class ContactChatComponent {
   constructor(private contactService: ContactService) {}
 
   get currentChat() {
-    console.log(this.contactService.getCurrentContact());
+    // console.log(this.contactService.getCurrentContact());
     return this.contactService.getCurrentContact();
   }
 }
