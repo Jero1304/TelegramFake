@@ -20,6 +20,8 @@ import { ContactComponent } from './componenti/side-bar-contacts/contact/contact
 import { ContactInfoComponent } from './componenti/main-chat/contact-info/contact-info.component';
 import { InputMessageComponent } from './componenti/main-chat/input-message/input-message.component';
 import { ContactChatComponent } from './componenti/main-chat/contact-chat/contact-chat.component';
+import { NavBarComponent } from './componenti/nav-bar/nav-bar.component';
+import {MatToolbarModule} from '@angular/material/toolbar';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,6 +32,7 @@ import { ContactChatComponent } from './componenti/main-chat/contact-chat/contac
     ContactInfoComponent,
     InputMessageComponent,
     ContactChatComponent,
+    NavBarComponent,
   ],
   imports: [
     BrowserModule,
@@ -46,6 +49,7 @@ import { ContactChatComponent } from './componenti/main-chat/contact-chat/contac
     MatButtonModule,
     MatIconModule,
     MatSelectModule,
+    MatToolbarModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
