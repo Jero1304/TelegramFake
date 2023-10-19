@@ -1,7 +1,8 @@
 import {
   Component,
   ElementRef,
-  ViewChild, AfterViewChecked
+  ViewChild,
+  AfterViewChecked,
 } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { ContactService } from 'src/app/service/contact.service';
@@ -12,28 +13,27 @@ import { ContactService } from 'src/app/service/contact.service';
   styleUrls: ['./contact-chat.component.css'],
 })
 export class ContactChatComponent implements AfterViewChecked {
-  @ViewChild('messageContainer', { static: false }) messageContainer!: ElementRef;
-  @ViewChild('scrollTo', { static: false }) scrollTo!: ElementRef;
+  @ViewChild('messageContainer', { static: false }) messageContainer!:
+    | ElementRef
+    | undefined;
+  @ViewChild('scrollTo', { static: false }) scrollTo!: ElementRef | undefined;
 
   private mutationObserver: MutationObserver | null = null;
 
-
-  constructor(
-    private contactService: ContactService,
-  ) { }
+  constructor(private contactService: ContactService) {}
 
   ngAfterViewChecked(): void {
     this.scrollToBottom();
   }
 
   private scrollToBottom(): void {
-    const container = this.messageContainer.nativeElement;
-    container.scrollTop = container.scrollHeight;
+    if (this.messageContainer && this.messageContainer.nativeElement) {
+      const container = this.messageContainer.nativeElement;
+      container.scrollTop = container.scrollHeight;
+    }
   }
 
-
   get currentChat() {
-    // console.log(this.contactService.getCurrentContact());
     return this.contactService.getCurrentContact();
   }
 }

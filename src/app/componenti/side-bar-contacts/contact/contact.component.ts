@@ -15,4 +15,6 @@ export class ContactComponent {
     const currentContact = this.contacts[index];
     this.contactService.setCurrentContact(currentContact);
   }
+
+  
 }
