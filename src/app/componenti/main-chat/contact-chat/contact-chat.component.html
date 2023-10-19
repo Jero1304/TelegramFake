@@ -1,6 +1,10 @@
 <!-- {{currentChat.messages[0].message}} -->
 
-<div *ngIf="currentChat && currentChat.messages" class="contact-chat">
+<div
+  #messageContainer
+  *ngIf="currentChat && currentChat.messages"
+  class="contact-chat"
+>
   <div
     *ngFor="let message of currentChat.messages"
     class="messaggio"
@@ -9,5 +13,4 @@
     <span>{{ message.message }}</span>
   </div>
   <!-- Questa vista scorrevole verrà visualizzata solo se currentChat.messages è definito e non è vuoto -->
-  <ng-template #scrollTo *ngIf="currentChat.messages.length > 0"></ng-template>
 </div>
