@@ -1,12 +1,13 @@
 <!-- {{currentChat.messages[0].message}} -->
 
-<div class="contact-chat">
-  <div *ngIf="currentChat && currentChat.messages">
-    <div *ngFor="let message of currentChat.messages;" class="messaggio" [ngClass]="message.status === 'sent' ? 'mex-send' : 'mex-received'">
-      <span>{{ message.message }}</span>
-    </div>
-    <!-- Questa vista scorrevole verrà visualizzata solo se currentChat.messages è definito e non è vuoto -->
-    <ng-template #scrollTo *ngIf="currentChat.messages.length > 0"></ng-template>
+<div *ngIf="currentChat && currentChat.messages" class="contact-chat">
+  <div
+    *ngFor="let message of currentChat.messages"
+    class="messaggio"
+    [ngClass]="message.status === 'sent' ? 'mex-send' : 'mex-received'"
+  >
+    <span>{{ message.message }}</span>
   </div>
+  <!-- Questa vista scorrevole verrà visualizzata solo se currentChat.messages è definito e non è vuoto -->
+  <ng-template #scrollTo *ngIf="currentChat.messages.length > 0"></ng-template>
 </div>
-
