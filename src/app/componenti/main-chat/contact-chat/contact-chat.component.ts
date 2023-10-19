@@ -1,7 +1,7 @@
 import {
   Component,
   ElementRef,
-  ViewChild, AfterViewInit, OnDestroy
+  ViewChild, AfterViewChecked
 } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { ContactService } from 'src/app/service/contact.service';
@@ -11,16 +11,24 @@ import { ContactService } from 'src/app/service/contact.service';
   templateUrl: './contact-chat.component.html',
   styleUrls: ['./contact-chat.component.css'],
 })
-export class ContactChatComponent implements AfterViewInit {
-  @ViewChild('lastMessageContainer', { read: ElementRef })
-  lastMessageContainer!: ElementRef;
+export class ContactChatComponent implements AfterViewChecked {
+  @ViewChild('messageContainer', { static: false }) messageContainer!: ElementRef;
+  @ViewChild('scrollTo', { static: false }) scrollTo!: ElementRef;
+
+  private mutationObserver: MutationObserver | null = null;
 
 
   constructor(
     private contactService: ContactService,
-  ) {}
+  ) { }
 
-  ngAfterViewInit(): void {
+  ngAfterViewChecked(): void {
+    this.scrollToBottom();
+  }
+
+  private scrollToBottom(): void {
+    const container = this.messageContainer.nativeElement;
+    container.scrollTop = container.scrollHeight;
   }
 
 
