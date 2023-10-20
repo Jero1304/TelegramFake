@@ -29,12 +29,34 @@ mat-drawer-content {
   padding: 14px 0 14px 0;
 }
 
+.option-btn{
+  margin-left: 14px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+.option-btn:hover{
+  transition: 0.3s;
+  background-color: var(--purple);
+}
+.option-btn >mat-icon{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  font-size: 30px;
+  padding: 5px;
+}
+
 .example-form-field {
   margin-bottom: -22px;
   width: 100%;
   margin-right: 10px;
 }
-
 .search {
   display: flex;
   align-items: center;
