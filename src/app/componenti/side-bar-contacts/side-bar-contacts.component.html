@@ -1,7 +1,7 @@
 <aside>
   <mat-drawer-container class="example-container" [hasBackdrop]="true">
     <!-- [opened]="true" per lasciare aperto -->
-    <mat-drawer #drawer [mode]="'over'">
+    <mat-drawer #drawer [mode]="'over'" [opened]="true">
       <app-side-nav-over></app-side-nav-over>
     </mat-drawer>
     <mat-drawer-content #mode>
@@ -11,7 +11,7 @@
           mat-button
           (click)="drawer.toggle()"
         >
-          <button
+          <button class="option-btn"
             mat-icon-button
             aria-label="Example icon button with a vertical three dot icon"
           >

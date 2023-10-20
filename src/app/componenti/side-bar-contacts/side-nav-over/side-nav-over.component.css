@@ -1,43 +1,88 @@
-ul,li{
-    list-style: none;
-    padding: 0;
+ul,
+li {
+  list-style: none;
+  padding: 0;
 }
-.side-over{
-    padding: 10px;
+.side-over {
+  background-color: var(--purple);
+  height: 100%;
+  width: 350px;
+  overflow-y: hidden;
 }
-.info-profilo{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: start;
-    gap: 20px;
-    background-color: aqua;
+.info-profilo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  border-bottom: 2px solid var(--darkPurple);
+}
+.foto-profilo {
+  border-radius: 100%;
+  max-width: 60%;
+}
+.info > * {
+  margin-bottom: 4px;
+  text-align: center;
+  line-height: 38px;
+}
+.nome-utente {
+  font-size: 30px;
+  text-transform: capitalize;
+}
+.numero-utente {
+  font-size: 20px;
+}
+.settings {
+  margin-top: 20px;
+}
+.settings h3 {
+  font-size: 26px;
+  text-transform: capitalize;
+  text-align: center;
+  padding: 10px;
+  background-color: var(--darkPurple);
+  border-radius: 999px;
+  width: fit-content;
+  margin: 0 auto;
+  color: var(--purple);
+  font-weight: bold;
+  cursor: pointer;
+}
 
+.setting-list {
+  padding: 10px;
 }
-.foto-profilo{
-    border-radius: 100%;
-    max-width: 20%;
+.setting-list li {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-direction: row;
+  gap: 14px;
+  padding: 6px;
+  border-radius: 20px;
+  cursor: pointer;
+  color: var(--darkPurple);
+  
 }
-.info >*{
-    margin-bottom: 4px;
+
+.setting-list li:hover {
+  transition: 0.2s ease-in;
+  background-color: var(--lightPurple);
+  color: black;
 }
-.settings{
-    margin-top: 20px;
-    background-color:cadetblue;
+
+li p {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  font-weight: bold;
+  /* color: var(--darkPurple); */
 }
-.settings li{
-    display: flex;
-    align-items: center;
-    justify-content: start;
-    flex-direction: row;
-    gap: 4px;
-    margin-bottom: 8px;
-    cursor: pointer;
-}
-li p{
-    margin: 0;
-}
-.settings mat-icon{
-    font-size: 35px;
-    padding: 0 14px 10px 0;
+.setting-list mat-icon {
+  font-size: 40px;
+  height: 40px;
+  width: 40px;
+  /* color: var(--darkPurple); */
 }
