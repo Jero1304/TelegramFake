@@ -14,6 +14,12 @@ export class SideBarContactsComponent {
     
   }
 
+  reset(){
+    this.value = ''
+    this.onSearchInputChange()
+    this.filtraContatti()
+  }
+
   onSearchInputChange() {
     // console.log('Input di ricerca modificato:', this.value);
     this.contactService.setValue(this.value);
