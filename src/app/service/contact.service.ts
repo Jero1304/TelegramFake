@@ -12,18 +12,16 @@ export class ContactService {
     ''
   );
   value$ = this.valueSubject.asObservable();
+  filtraContatti$: BehaviorSubject<any[]> = new BehaviorSubject<any[]>([]); // Modifica per definire filtraContatti$ come BehaviorSubject
 
   getValue(): string {
     return this.valueSubject.getValue();
   }
 
   setValue(nuovoValore: string) {
-    // console.log('Impostazione del valore a:', nuovoValore);
     this.valueSubject.next(nuovoValore);
     this.filtraContatti(nuovoValore);
   }
-
-
 
   getContacts() {
     console.log(contacts);
@@ -38,15 +36,13 @@ export class ContactService {
     return this.currentContact;
   }
 
-  private filtraContatti(testoFiltro: string) {
+  public filtraContatti(testoFiltro: string) {
     const contactsFilter = this.getContacts();
-    contactsFilter.filter((contatto) => contatto.name.toLowerCase().includes(testoFiltro.toLowerCase()));
-    console.log(
-      'contactsFilter',
-      contactsFilter.filter((contatto) =>
-        contatto.name.toLowerCase().includes(testoFiltro.toLowerCase())
-      )
+    const filteredContacts = contactsFilter.filter((contatto) => 
+      contatto.name.toLowerCase().includes(testoFiltro.toLowerCase())
     );
-    return contactsFilter;
+    
+    console.log('contactsFilter', filteredContacts);
+    this.filtraContatti$.next(filteredContacts); // Emetti i contatti filtrati tramite il BehaviorSubject
   }
 }
