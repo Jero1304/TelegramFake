@@ -2,25 +2,26 @@
   border-bottom: 2px solid var(--darkPurple);
 }
 .card {
-  margin: 10px 10px 10px 10px;
   display: flex;
   align-items: center;
   flex-direction: row;
   flex-wrap: nowrap;
   padding: 10px;
   max-width: 100%;
-  border-radius: 10px 10px 0 0;
+  /* border-radius: 10px 10px 0 0; */
   cursor: pointer;
 }
 .card:last-child {
   border-bottom: none;
 }
-.card:hover,.selected-contact {
+.card:hover,
+.selected-contact {
   transition: 0.3s ease-in;
   background-color: var(--lightPurple);
-  border-radius: 10px;
+  /* border-radius: 10px; */
 }
-.card:default,.selected-contact {
+.card:default,
+.selected-contact {
   transition: 0.3s ease-out;
   background-color: rgb(106, 45, 156);
   border-radius: 10px;

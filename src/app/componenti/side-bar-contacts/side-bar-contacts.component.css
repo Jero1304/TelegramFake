@@ -36,11 +36,16 @@ mat-drawer-content {
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 100%;
+  border: 2px solid var(--purple);
+
   
 }
 .option-btn:hover{
   transition: 0.3s;
   background-color: var(--purple);
+  box-shadow: 0px 0px 10px 6px var(--purple);
+  border: none;
 }
 .option-btn >mat-icon{
   display: flex;
@@ -50,6 +55,8 @@ mat-drawer-content {
   height: 40px;
   font-size: 30px;
   padding: 5px;
+  color: white;
+  
 }
 
 .example-form-field {
