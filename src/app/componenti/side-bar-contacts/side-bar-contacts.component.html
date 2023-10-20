@@ -29,6 +29,7 @@
                 matInput
                 type="text"
                 [(ngModel)]="value"
+                (input)="onSearchInputChange()"
               />
               <button
               *ngIf="value"

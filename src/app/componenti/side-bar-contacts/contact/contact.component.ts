@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ContactService } from '../../../service/contact.service';
 
 @Component({
@@ -6,11 +6,19 @@ import { ContactService } from '../../../service/contact.service';
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.css']
 })
-export class ContactComponent {
-  contacts = this.contactService.getContacts();
+export class ContactComponent implements OnInit {
+  contacts: any[] = [];
 
-  constructor(private contactService: ContactService) {}
-  
+  constructor(private contactService: ContactService) {
+    this.contactService.filtraContatti$.subscribe((filtraContatti: any[]) => {
+      this.contacts = filtraContatti;
+    });
+  }
+
+  ngOnInit() {
+    this.contacts = this.contactService.getContacts(); // Inizialmente ottieni tutti i contatti
+  }
+
   setContact(index: number) {
     const currentContact = this.contacts[index];
     this.contactService.setCurrentContact(currentContact);
