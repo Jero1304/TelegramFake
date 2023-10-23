@@ -126,48 +126,32 @@ const contacts: Contact[] = [
     visible: true,
     messages: [
       {
-        date: '28/03/2020 10:10:40',
-        message: 'La Marianna va in campagna',
-        status: 'sent',
-      },
-      {
-        date: '28/03/2020 10:20:10',
-        message: 'Sicuro di non aver sbagliato chat?',
-        status: 'received',
-      },
-      {
-        date: '28/03/2020 16:15:22',
-        message: 'Ah scusa!',
-        status: 'sent',
-      },
-      // Nuovi messaggi
-      {
-        date: '29/03/2020 14:50:00',
+        date: '12/03/2020 14:50:00', // Cambia questa data
         message: 'Phoebe, puoi suonare una delle tue canzoni per me?',
         status: 'received',
       },
       {
-        date: '29/03/2020 15:00:00',
+        date: '12/03/2020 15:00:00', // Cambia questa data
         message: 'Certo! Ecco una canzone sulla smelly cat:',
         status: 'sent',
       },
       {
-        date: '29/03/2020 15:05:00',
+        date: '12/03/2020 15:05:00', // Cambia questa data
         message: 'Smelly cat, smelly cat, what are they feeding you?',
         status: 'sent',
       },
       {
-        date: '29/03/2020 15:10:00',
+        date: '12/03/2020 15:10:00', // Cambia questa data
         message: 'Lo adoro! Sei fantastica, Phoebe.',
         status: 'received',
       },
       {
-        date: '30/03/2020 11:30:00',
+        date: '10/03/2020 11:10:00', // Cambia questa data
         message: 'Hai visto un uccello con un cappello?',
         status: 'received',
       },
       {
-        date: '30/03/2020 11:35:00',
+        date: '10/03/2020 11:35:00', // Cambia questa data
         message: 'No, ma chissà che storia avrebbe da raccontare!',
         status: 'sent',
       },

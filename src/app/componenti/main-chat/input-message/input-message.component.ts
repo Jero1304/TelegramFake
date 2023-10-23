@@ -20,7 +20,7 @@ export class InputMessageComponent {
         status: 'sent',
       };
 
-      console.log('message: messageForm.value.message', messageForm.value.messaggio);
+      console.log('message: messageForm.value.message', messageForm.value.message);
 
       if (!currentContact.messages) {
         currentContact.messages = [];
