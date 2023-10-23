@@ -8,15 +8,12 @@
   />
   <div class="info">
     <h3 class="profile-name">{{ currentChat.name }}</h3>
-    <!-- <p
-      [class.online]="currentChat.isOnline"
-      [class.offline]="!currentChat.isOnline"
-      class="online"
-    >
-      Online
-    </p> -->
-    <p *ngIf="currentChat.isOnline" class="online">Online</p>
-    <p *ngIf="!currentChat.isOnline" class="offline">Offline</p>
+    <p *ngIf="currentChat.isOnline" class="online">
+      <span class="status"> Online </span>
+    </p>
+    <p *ngIf="!currentChat.isOnline" class="offline">
+      <span class="status"> Offline </span>
+    </p>
   </div>
 
   <mat-icon class="call"> call</mat-icon>
