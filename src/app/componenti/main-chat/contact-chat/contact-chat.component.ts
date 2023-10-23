@@ -43,15 +43,18 @@ export class ContactChatComponent implements AfterViewChecked {
   }
 
   formattaOraMessaggio(dataString: string): string {
-    // Non è necessario fare alcuna conversione, dato che le date sono già nel formato desiderato
-    return dataString;
+    // Trasforma la stringa in una data
+    const messageDate = new Date(dataString);
+    // Formatta la data nel formato "dd/MM/yyyy"
+    return format(messageDate, 'dd - MMM - yyyy');
   }
 
   groupMessagesByDay(messages: any[]): GroupedMessages {
     const groupedMessages: GroupedMessages = {};
 
     for (const message of messages) {
-      const messageDateFormat = message.date; // Utilizza direttamente la data dall'oggetto
+      // Formatta la data nel formato "dd/MM/yyyy"
+      const messageDateFormat = this.formattaOraMessaggio(message.date);
       if (!groupedMessages[messageDateFormat]) {
         groupedMessages[messageDateFormat] = [];
       }

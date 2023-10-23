@@ -16,7 +16,7 @@
   </div>
 </div> -->
 
-<div *ngIf="currentChat && currentChat.messages" class="contact-chat">
+<div #messageContainer *ngIf="currentChat && currentChat.messages" class="contact-chat">
   <ng-container *ngFor="let group of groupMessagesByDay(currentChat.messages) | keyvalue">
     <p class="date-message">{{ group.key }}</p> <!-- Visualizza la data nel formato "gg-mm-yyyy" -->
 
