@@ -42,24 +42,33 @@ export class ContactChatComponent implements AfterViewChecked {
     return this.contactService.getCurrentContact();
   }
 
-  formattaOraMessaggio(dataString: string): string {
+  formattaDataMessaggio(dataString: string): string {
     // Trasforma la stringa in una data con il formato specifico
     const messageDate = parse(dataString, 'dd/MM/yyyy HH:mm:ss', new Date());
     // Formatta la data solo come "dd/MM/yyyy"
     return format(messageDate, 'dd/MM/yyyy');
   }
 
+  formattaOraMessaggio(dataString: string): string {
+    // Trasforma la stringa in una data con il formato specifico
+    const messageDate = parse(dataString, 'dd/MM/yyyy HH:mm:ss', new Date());
+    // Formatta la data solo come "dd/MM/yyyy"
+    return format(messageDate, 'HH:mm');
+  }
+
+
   groupMessagesByDay(messages: any[]): GroupedMessages {
     const groupedMessages: GroupedMessages = {};
 
     for (const message of messages) {
       // Estrai la parte della data che include giorno, mese e anno
-      const messageDateFormat = this.formattaOraMessaggio(message.date);
+      const messageDateFormat = this.formattaDataMessaggio(message.date);
       if (!groupedMessages[messageDateFormat]) {
         groupedMessages[messageDateFormat] = [];
       }
       groupedMessages[messageDateFormat].push(message);
     }
+    console.log('groupedMessages',groupedMessages);
 
     return groupedMessages;
   }
