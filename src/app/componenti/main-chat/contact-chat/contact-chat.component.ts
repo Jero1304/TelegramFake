@@ -42,25 +42,33 @@ export class ContactChatComponent implements AfterViewChecked {
     return this.contactService.getCurrentContact();
   }
 
-  formattaOraMessaggio(dataString: string): string {
-    // Trasforma la stringa in una data
-    const messageDate = new Date(dataString);
-    // Formatta la data nel formato "dd/MM/yyyy"
-    return format(messageDate, 'dd - MMM - yyyy');
+  formattaDataMessaggio(dataString: string): string {
+    const messageDate = parse(dataString, 'dd/MM/yyyy HH:mm:ss', new Date());
+    return format(messageDate, 'dd/MM/yyyy');
   }
+
+  formattaOraMessaggio(dataString: string): string {
+    const messageDate = parse(dataString, 'dd/MM/yyyy HH:mm:ss', new Date());
+    return format(messageDate, 'HH:mm');
+  }
+
 
   groupMessagesByDay(messages: any[]): GroupedMessages {
     const groupedMessages: GroupedMessages = {};
-
+  
     for (const message of messages) {
-      // Formatta la data nel formato "dd/MM/yyyy"
-      const messageDateFormat = this.formattaOraMessaggio(message.date);
+      // Estrai la parte della data che include giorno, mese e anno
+      const messageDateFormat = this.formattaDataMessaggio(message.date);
       if (!groupedMessages[messageDateFormat]) {
         groupedMessages[messageDateFormat] = [];
       }
-      groupedMessages[messageDateFormat].push(message);
+  
+      // Inverti l'ordine dei messaggi in ciascun gruppo
+      groupedMessages[messageDateFormat].unshift(message); // Usiamo unshift invece di push
+  
+      // Questo metterà i nuovi messaggi in cima al gruppo
     }
-
+  
     return groupedMessages;
   }
 }
