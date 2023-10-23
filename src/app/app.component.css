@@ -34,12 +34,10 @@ header {
 }
 
 .side-bar{
-    border: 2px solid red;
     height: 100%;
     width: 40%;
 }
 .main-chat{
-    border: 2px solid red;
     height: 100%;
     width: 60%;
 }

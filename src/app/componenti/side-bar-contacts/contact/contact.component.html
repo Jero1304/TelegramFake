@@ -3,8 +3,17 @@
   class="contatto-card"
   (click)="setContact(i)"
 >
-  <div class="card" [ngClass]="{ 'selected-contact': selectedContact === contact }">
-    <img class="foto-profilo contact-online" src="https://picsum.photos/200" alt="" />
+  <div
+    class="card"
+    [ngClass]="{ 'selected-contact': selectedContact === contact }"
+  >
+    <img
+      class="foto-profilo"
+      [src]="contact.avatar"
+      [class.contact-online]="contact.isOnline"
+      [class.contact-offline]="!contact.isOnline"
+      alt=""
+    />
     <div class="info">
       <h2 class="name">{{ contact.name }}</h2>
       <p class="last-mex">last-mex</p>

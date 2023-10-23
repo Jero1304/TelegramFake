@@ -45,3 +45,7 @@
     color: var(--online);
     font-weight: bolder;
 }
+.offline{
+    color: var(--offline);
+    font-weight: bolder;
+}
