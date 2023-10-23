@@ -1,8 +1,19 @@
 <div class="contact-info">
-  <img class="profile-thumb contact-online" src="https://picsum.photos/200" alt="" />
+  <img
+    [class.contact-online]="currentChat.isOnline"
+    [class.contact-offline]="!currentChat.isOnline"
+    class="profile-thumb contact-online"
+    [src]="currentChat.avatar"
+    alt=""
+  />
   <div class="info">
-    <h3 class="profile-name">{{currentChat.name}}</h3>
-    <p class="online">Online</p>
+    <h3 class="profile-name">{{ currentChat.name }}</h3>
+    <p *ngIf="currentChat.isOnline" class="online">
+      <span class="status"> Online </span>
+    </p>
+    <p *ngIf="!currentChat.isOnline" class="offline">
+      <span class="status"> Offline </span>
+    </p>
   </div>
 
   <mat-icon class="call"> call</mat-icon>

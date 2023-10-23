@@ -64,7 +64,7 @@ export class ContactChatComponent implements AfterViewChecked {
       }
   
       // Inverti l'ordine dei messaggi in ciascun gruppo
-      groupedMessages[messageDateFormat].unshift(message); // Usiamo unshift invece di push
+      groupedMessages[messageDateFormat].push(message); // Usiamo unshift invece di push
   
       // Questo metterà i nuovi messaggi in cima al gruppo
     }

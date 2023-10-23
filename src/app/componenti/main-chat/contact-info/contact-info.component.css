@@ -45,3 +45,20 @@
     color: var(--online);
     font-weight: bolder;
 }
+.offline{
+    color: var(--offline);
+    font-weight: bolder;
+}
+
+.status::before {
+  content: "•"; /* Aggiunge un pallino prima del testo */
+  color: currentColor; /* Prende il colore dalla classe padre */
+  font-size: 40px; /* Imposta la dimensione del pallino */
+  margin-right: 4px; /* Aggiunge uno spazio tra il pallino e il testo */
+}
+.status{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}

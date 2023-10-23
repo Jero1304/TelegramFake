@@ -10,14 +10,16 @@ type Contact = {
   name: string;
   avatar: string;
   visible: boolean;
+  isOnline:boolean;
   messages: Message[];
 };
 
 const contacts: Contact[] = [
   {
     name: 'Joey',
-    avatar: './img/joey.jpg',
+    avatar: 'https://i.pinimg.com/474x/d7/e7/a8/d7e7a8679c35c633bbd87ce4e7ce5f69.jpg',
     visible: true,
+    isOnline:false,
     messages: [
       {
         date: '10/01/2020 15:30:55',
@@ -69,8 +71,9 @@ const contacts: Contact[] = [
   },
   {
     name: 'Rachel',
-    avatar: './img/rachel.jpg',
+    avatar: 'https://i.pinimg.com/564x/c1/05/a5/c105a5b1b1961c4958859d80a69cdaf8.jpg',
     visible: true,
+    isOnline:true,
     messages: [
       {
         date: '20/03/2020 16:30:00',
@@ -122,8 +125,9 @@ const contacts: Contact[] = [
   },
   {
     name: 'Phoebe',
-    avatar: './img/phoebe.jpg',
+    avatar: 'https://i.pinimg.com/474x/ac/13/7f/ac137f4f4c3d00435827ea0ba39f7b2c.jpg',
     visible: true,
+    isOnline:true,
     messages: [
       {
         date: '12/03/2020 14:50:00', // Cambia questa data
@@ -159,8 +163,9 @@ const contacts: Contact[] = [
   },
   {
     name: 'Ross',
-    avatar: './img/ross.jpg',
+    avatar: 'https://i.pinimg.com/474x/23/63/8c/23638c91463820b498947629f5d04c2d.jpg',
     visible: true,
+    isOnline:false,
     messages: [
       {
         date: '10/01/2020 15:30:55',
@@ -207,8 +212,9 @@ const contacts: Contact[] = [
   },
   {
     name: 'Monica',
-    avatar: './img/monica.jpg',
+    avatar: 'https://i.pinimg.com/474x/e1/ce/7e/e1ce7e1a46556238558811d165b0d5b5.jpg',
     visible: true,
+    isOnline:false,
     messages: [
       {
         date: '10/01/2020 15:30:55',
@@ -255,8 +261,9 @@ const contacts: Contact[] = [
   },
   {
     name: 'Chandler',
-    avatar: './img/chandler.jpg',
+    avatar: 'https://i.pinimg.com/474x/b1/e3/85/b1e385cf11af6ed1c250f690233ab0f8.jpg',
     visible: true,
+    isOnline:true,
     messages: [
       {
         date: '10/01/2020 15:30:55',
@@ -308,8 +315,9 @@ const contacts: Contact[] = [
   },
   {
     name: 'Gunther',
-    avatar: './img/gunther.jpg',
+    avatar: 'https://d1qxviojg2h5lt.cloudfront.net/images/01FJT9ZCQHHHKG8GKFBB7J4JWM/james.michael.tyler.friends.webp',
     visible: true,
+    isOnline:true,
     messages: [
       {
         date: '10/01/2020 15:30:55',
@@ -356,8 +364,9 @@ const contacts: Contact[] = [
   },
   {
     name: 'Carol',
-    avatar: './img/carol.jpg',
+    avatar: 'https://production.listennotes.com/podcasts/stav-abby-matt/interview-with-jane-sibbett-KqUbo3t17VX-H-vU8NehYbQ.300x300.jpg',
     visible: true,
+    isOnline:true,
     messages: [
       {
         date: '10/01/2020 15:30:55',
@@ -409,8 +418,9 @@ const contacts: Contact[] = [
   },
   {
     name: 'Janice',
-    avatar: './img/janice.jpg',
+    avatar: 'https://s3-eu-west-1.amazonaws.com/static.screenweek.it/interpretation/original_low-81545.jpg?1456326278',
     visible: true,
+    isOnline:false,
     messages: [
       {
         date: '10/01/2020 15:30:55',

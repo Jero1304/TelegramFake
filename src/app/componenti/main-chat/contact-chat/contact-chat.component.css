@@ -32,9 +32,14 @@
   margin-bottom: 6px;
 }
 .date-message {
-  background-color: rgba(137, 43, 226, 0.808);
+  background-color: var(--obscurePurple);
   border-radius: 999px;
   padding: 8px;
   color: white;
   text-align: center;
+  width: 100px;
+  margin: 0 auto;
+}
+.date-message:first-child{
+  margin-top: 10px;
 }
