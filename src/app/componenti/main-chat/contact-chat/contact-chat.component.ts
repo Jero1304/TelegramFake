@@ -4,12 +4,14 @@ import {
   ViewChild,
   AfterViewChecked,
 } from '@angular/core';
-import { format } from 'date-fns';
+import { format, parse } from 'date-fns';
 import { FormGroup } from '@angular/forms';
 import { ContactService } from 'src/app/service/contact.service';
+
 interface GroupedMessages {
   [date: string]: any[];
 }
+
 @Component({
   selector: 'app-contact-chat',
   templateUrl: './contact-chat.component.html',
@@ -41,31 +43,21 @@ export class ContactChatComponent implements AfterViewChecked {
   }
 
   formattaOraMessaggio(dataString: string): string {
-    console.log('dataString',dataString);
-    const messageDate = new Date(dataString);
-    console.log('messageDate',messageDate);
-    // console.log('format',format(messageDate, 'MM/dd/yyyy'));
-    return format(messageDate, 'dd/MM/yyyy');
-    // return format(messageDate, 'MM/dd/yyyy');
+    // Non è necessario fare alcuna conversione, dato che le date sono già nel formato desiderato
+    return dataString;
   }
 
   groupMessagesByDay(messages: any[]): GroupedMessages {
     const groupedMessages: GroupedMessages = {};
+
     for (const message of messages) {
-      const messageDate = new Date(message.date);
-  
-      // Verifica se la data è valida prima di procedere
-      if (!isNaN(messageDate.getTime())) {
-        const dayKey = this.formattaOraMessaggio(message.date);
-        // const dayKey = format(messageDate, 'MM/dd/yyyy');
-  
-        if (!groupedMessages[dayKey]) {
-          groupedMessages[dayKey] = [];
-        }
-        groupedMessages[dayKey].push(message);
+      const messageDateFormat = message.date; // Utilizza direttamente la data dall'oggetto
+      if (!groupedMessages[messageDateFormat]) {
+        groupedMessages[messageDateFormat] = [];
       }
+      groupedMessages[messageDateFormat].push(message);
     }
+
     return groupedMessages;
   }
-  
 }
