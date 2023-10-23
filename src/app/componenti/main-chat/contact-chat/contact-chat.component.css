@@ -1,22 +1,40 @@
 .messaggio {
-  padding: 10px;
-  border: 1px solid blue;
+  padding: 14px;
   border-radius: 20px;
   max-width: 60%;
   margin: 10px;
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .mex-send {
-  background-color: rgb(157, 255, 111);
-  margin-right: auto;
-  
+  background-color: var(--online);
+  margin-left: auto;
 }
 .mex-received {
   background-color: dodgerblue;
+  margin-right: auto;
+}
+.contact-chat {
+  display: flex;
+  flex-direction: column;
+  max-height: 100%;
+  overflow-y: auto;
+}
+.hour {
+  font-size: 14px;
   margin-left: auto;
 }
-.contact-chat{
-    display: flex;
-    flex-direction: column;
-    max-height: 100%; 
-    overflow-y: auto;
+.message {
+  font-size: 20px;
+  margin-bottom: 6px;
+}
+.date-message {
+  background-color: rgba(137, 43, 226, 0.808);
+  border-radius: 999px;
+  padding: 8px;
+  color: white;
+  text-align: center;
 }

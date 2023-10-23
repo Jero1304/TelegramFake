@@ -1,5 +1,5 @@
 <!-- {{currentChat.messages[0].message}} -->
-
+<!-- 
 <div
   #messageContainer
   *ngIf="currentChat && currentChat.messages"
@@ -10,10 +10,19 @@
     class="messaggio"
     [ngClass]="message.status === 'sent' ? 'mex-send' : 'mex-received'"
   >
-    <span>{{ message.message }}</span>
-  </div>
-  <!-- Questa vista scorrevole verrà visualizzata solo se currentChat.messages è definito e non è vuoto -->
-</div>
-<div #scrollTo>
+    <p class="message">{{ message.message }}</p>
 
+    <span class="hour">{{ formattaOraMessaggio(message.date) }}</span>
+  </div>
+</div> -->
+
+<div *ngIf="currentChat && currentChat.messages" class="contact-chat">
+  <ng-container *ngFor="let group of groupMessagesByDay(currentChat.messages) | keyvalue">
+    <p class="date-message">{{ group.key }}</p> <!-- Visualizza la data nel formato "gg-mm-yyyy" -->
+
+    <div *ngFor="let message of group.value" class="messaggio" [ngClass]="message.status === 'sent' ? 'mex-send' : 'mex-received'">
+      <p class="message">{{ message.message }}</p>
+      <span class="hour">{{ formattaOraMessaggio(message.date) }}</span>
+    </div>
+  </ng-container>
 </div>

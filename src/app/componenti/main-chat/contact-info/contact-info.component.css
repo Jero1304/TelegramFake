@@ -2,23 +2,34 @@
     display: flex;
     align-items: center;
     padding: 20px;
-    background-color: blueviolet;
+    background-color: var(--purple);
 }
 .profile-thumb{
     max-width: 100px;
     border-radius: 100%;
+}
+.contact-online{
+    border: 4px solid var(--online);
+    border-radius: 999px;
+}
+.contact-offline{
+    border: 4px solid var(--offline);
+    border-radius: 999px;
 }
 .info{
     margin: 0 0 0 20px;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
+    justify-content: space-between;
 }
 .info p ,h3{
     margin: 6px;
 }
 .profile-name{
     font-size: 32px;
+    color: white;
+    text-transform: capitalize;
 }
 .call{
     padding: 10px;
@@ -26,6 +37,11 @@
     height: 35px;
     font-size: 35px;
     margin-left: auto;
-    background-color: aquamarine;
+    background-color: var(--online);
     border-radius: 100%;
+    color: white;
+}
+.online{
+    color: var(--online);
+    font-weight: bolder;
 }
