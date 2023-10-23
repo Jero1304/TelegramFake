@@ -73,48 +73,48 @@ const contacts: Contact[] = [
     visible: true,
     messages: [
       {
-        date: '20/03/2020 16:30:00',
+        date: '02/03/2020 16:30:00',
         message: 'Ciao, come stai?',
         status: 'received',
       },
       {
-        date: '20/03/2020 16:30:55',
+        date: '02/03/2020 16:30:55',
         message: 'Bene grazie! Stasera ci vediamo?',
         status: 'sent',
       },
       {
-        date: '20/03/2020 16:35:00',
+        date: '02/03/2020 16:35:00',
         message: 'Mi piacerebbe, ma devo andare a fare la spesa.',
         status: 'received',
       },
       // Nuovi messaggi
       {
-        date: '21/03/2020 11:00:00',
+        date: '06/03/2020 11:00:00',
         message: "Hai visto l'ultimo vestito che ho comprato?",
         status: 'received',
       },
       {
-        date: '21/03/2020 11:05:00',
+        date: '06/03/2020 11:05:00',
         message: 'Sì, è bellissimo! Ti sta benissimo.',
         status: 'sent',
       },
       {
-        date: '21/03/2020 11:10:00',
+        date: '06/03/2020 11:10:00',
         message: 'Grazie, Rachel! Dovremmo fare shopping insieme.',
         status: 'received',
       },
       {
-        date: '22/03/2020 09:30:00',
+        date: '07/03/2020 09:30:00',
         message: 'Come sta Emma?',
         status: 'received',
       },
       {
-        date: '22/03/2020 09:35:00',
+        date: '07/03/2020 09:35:00',
         message: 'Cresce così velocemente! È adorabile.',
         status: 'sent',
       },
       {
-        date: '22/03/2020 09:40:00',
+        date: '07/03/2020 09:40:00',
         message: 'Mi mancate entrambi.',
         status: 'received',
       },
@@ -126,48 +126,48 @@ const contacts: Contact[] = [
     visible: true,
     messages: [
       {
-        date: '28/03/2020 10:10:40',
+        date: '08/03/2020 10:10:40',
         message: 'La Marianna va in campagna',
         status: 'sent',
       },
       {
-        date: '28/03/2020 10:20:10',
+        date: '08/03/2020 10:20:10',
         message: 'Sicuro di non aver sbagliato chat?',
         status: 'received',
       },
       {
-        date: '28/03/2020 16:15:22',
+        date: '08/03/2020 16:15:22',
         message: 'Ah scusa!',
         status: 'sent',
       },
       // Nuovi messaggi
       {
-        date: '29/03/2020 14:50:00',
+        date: '09/03/2020 14:50:00',
         message: 'Phoebe, puoi suonare una delle tue canzoni per me?',
         status: 'received',
       },
       {
-        date: '29/03/2020 15:00:00',
+        date: '09/03/2020 15:00:00',
         message: 'Certo! Ecco una canzone sulla smelly cat:',
         status: 'sent',
       },
       {
-        date: '29/03/2020 15:05:00',
+        date: '09/03/2020 15:05:00',
         message: 'Smelly cat, smelly cat, what are they feeding you?',
         status: 'sent',
       },
       {
-        date: '29/03/2020 15:10:00',
+        date: '09/03/2020 15:10:00',
         message: 'Lo adoro! Sei fantastica, Phoebe.',
         status: 'received',
       },
       {
-        date: '30/03/2020 11:30:00',
+        date: '03/03/2020 11:30:00',
         message: 'Hai visto un uccello con un cappello?',
         status: 'received',
       },
       {
-        date: '30/03/2020 11:35:00',
+        date: '03/03/2020 11:35:00',
         message: 'No, ma chissà che storia avrebbe da raccontare!',
         status: 'sent',
       },

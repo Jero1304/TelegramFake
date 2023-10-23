@@ -1,7 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;background-color: #a26fd65e; }
 
 :root{
     --purple:#824bb9;
@@ -9,4 +9,6 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     --darkPurple:#480875;
     --obscurePurple:#350069;
     --blueCoral:#2e2d88;
+    --online:#23af6e;
+    --offline:#ad2828;
 }
