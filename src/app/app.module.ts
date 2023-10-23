@@ -1,14 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SideBarContactsComponent } from './componenti/side-bar-contacts/side-bar-contacts.component';
 import { MainChatComponent } from './componenti/main-chat/main-chat.component';
-
 import { MatButtonModule } from '@angular/material/button';
-import { NgIf } from '@angular/common';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { FormsModule } from '@angular/forms';
@@ -21,7 +18,9 @@ import { ContactInfoComponent } from './componenti/main-chat/contact-info/contac
 import { InputMessageComponent } from './componenti/main-chat/input-message/input-message.component';
 import { ContactChatComponent } from './componenti/main-chat/contact-chat/contact-chat.component';
 import { NavBarComponent } from './componenti/nav-bar/nav-bar.component';
-import {MatToolbarModule} from '@angular/material/toolbar';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { DefaultComponent } from './componenti/default/default.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,21 +32,18 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     InputMessageComponent,
     ContactChatComponent,
     NavBarComponent,
+    DefaultComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatSidenavModule,
-    NgIf,
     MatButtonModule,
     MatIconModule,
     MatFormFieldModule,
     MatInputModule,
     FormsModule,
-    NgIf,
-    MatButtonModule,
-    MatIconModule,
     MatSelectModule,
     MatToolbarModule,
   ],
