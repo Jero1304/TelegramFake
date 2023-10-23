@@ -6,7 +6,9 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root',
 })
 export class ContactService {
-  private currentContact: any = [0];
+  private currentContact: any = [];
+
+  public default:boolean = true
 
   private valueSubject: BehaviorSubject<string> = new BehaviorSubject<string>(
     ''

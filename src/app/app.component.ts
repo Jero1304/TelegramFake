@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {MatSidenavModule} from '@angular/material/sidenav';
+import { ContactService } from './service/contact.service'; // Assicurati di utilizzare il percorso corretto
 
 @Component({
   selector: 'app-root',
@@ -7,5 +7,9 @@ import {MatSidenavModule} from '@angular/material/sidenav';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
+  constructor(public contactService: ContactService) {
+    this.contactService = contactService;
+  }
+
   title = 'TelegramFake';
 }

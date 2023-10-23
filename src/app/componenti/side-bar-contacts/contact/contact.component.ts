@@ -21,6 +21,8 @@ export class ContactComponent implements OnInit {
   }
 
   setContact(index: number) {
+    this.contactService.default = false
+    
     const currentContact = this.contacts[index];
     this.contactService.setCurrentContact(currentContact);
     this.selectedContact = currentContact;

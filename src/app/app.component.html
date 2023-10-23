@@ -5,7 +5,9 @@
   <div class="container">
     <div class="main-app">
       <app-side-bar-contacts class="side-bar"></app-side-bar-contacts>
-      <app-main-chat class="main-chat"></app-main-chat>
+
+      <app-main-chat class="main-chat" *ngIf="!contactService.default"></app-main-chat>
+      <app-default *ngIf="contactService.default"></app-default>
     </div>
   </div>
 </main>
