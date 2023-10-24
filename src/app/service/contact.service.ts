@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { contacts } from '../data/contacts';
 import { BehaviorSubject, last } from 'rxjs';
+import { format, parse } from 'date-fns';
 
 @Injectable({
   providedIn: 'root',
@@ -46,23 +47,34 @@ export class ContactService {
     this.filtraContatti$.next(filteredContacts);
   }
 
+  
   public lastMessage(contact: any): any {
     if (contact.messages && contact.messages.length > 0) {
-      // Ordina i messaggi per data in ordine decrescente
-      const messaggiOrdinati = contact.messages
-        .slice()
-        .sort(
-          (a: { date: string | number | Date }, b: { date: string | number | Date }) => {
-            const dataMessaggioA = new Date(a.date);
-            const dataMessaggioB = new Date(b.date);
-            return dataMessaggioB.getTime() - dataMessaggioA.getTime();
-          }
-        );
-        return messaggiOrdinati[0]; // Restituisce l'ultimo messaggio (il più recente)
+      const latestMessage = contact.messages.reduce(
+        (latest: any, current: any) => {
+          const dateA = new Date(latest.date);
+          const dateB = new Date(current.date);
+          return dateA > dateB ? latest : current;
+        },
+        contact.messages[0]
+      );
+
+      return latestMessage;
     } else {
-      return null; // Nessun messaggio disponibile
+      return null;
     }
   }
 
+  formattaOraMessaggio(contatto: string): string {
+    const ultimoMessaggio = this.lastMessage(contatto).date;
+    // console.log(this.lastMessage(contatto));
+    const messageDate = parse(
+      ultimoMessaggio,
+      'dd/MM/yyyy HH:mm:ss',
+      new Date()
+    );
+    // console.log(format(messageDate, 'HH:mm'));
 
+    return format(messageDate, 'HH:mm');
+  }
 }

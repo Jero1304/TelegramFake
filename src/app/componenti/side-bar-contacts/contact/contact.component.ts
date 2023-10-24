@@ -18,7 +18,7 @@ export class ContactComponent implements OnInit {
   }
 
   lastMex(contact:any){
-    console.log('lastMessage contact',this.contactService.lastMessage(contact));
+    // console.log('lastMessage contact',this.contactService.lastMessage(contact));
     return this.contactService.lastMessage(contact);
   }
 
@@ -33,12 +33,7 @@ export class ContactComponent implements OnInit {
     this.contactService.default = false;
   }
 
-  formattaOraMessaggio(contatto: string): string {
-    const ultimoMessaggio = this.lastMex(contatto).date
-    console.log(this.lastMex(contatto));
-    const messageDate = parse(ultimoMessaggio, 'dd/MM/yyyy HH:mm:ss', new Date());
-    console.log(format(messageDate, 'HH:mm'));
-
-    return format(messageDate, 'HH:mm');
+  formattaOraMex(contatto: string): string {
+    return this.contactService.formattaOraMessaggio(contatto)
   }
 }
