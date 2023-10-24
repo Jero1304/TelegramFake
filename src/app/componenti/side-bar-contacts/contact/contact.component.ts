@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ContactService } from '../../../service/contact.service';
+import { format, parse } from 'date-fns';
 
 @Component({
   selector: 'app-contact',
@@ -16,15 +17,23 @@ export class ContactComponent implements OnInit {
     });
   }
 
+  lastMex(contact:any){
+    // console.log('lastMessage contact',this.contactService.lastMessage(contact));
+    return this.contactService.lastMessage(contact);
+  }
+
   ngOnInit() {
-    this.contacts = this.contactService.getContacts(); // Inizialmente ottieni tutti i contatti
+    this.contacts = this.contactService.getContacts();
   }
 
   setContact(index: number) {
-    this.contactService.default = false
-    
     const currentContact = this.contacts[index];
     this.contactService.setCurrentContact(currentContact);
     this.selectedContact = currentContact;
+    this.contactService.default = false;
+  }
+
+  formattaOraMex(contatto: string): string {
+    return this.contactService.formattaOraMessaggio(contatto)
   }
 }
