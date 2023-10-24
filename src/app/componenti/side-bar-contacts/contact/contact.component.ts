@@ -17,14 +17,16 @@ export class ContactComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.contacts = this.contactService.getContacts(); // Inizialmente ottieni tutti i contatti
+    this.contacts = this.contactService.getContacts();
   }
 
   setContact(index: number) {
-    this.contactService.default = false
-    
+    this.contactService.default = false;
     const currentContact = this.contacts[index];
     this.contactService.setCurrentContact(currentContact);
     this.selectedContact = currentContact;
+    this.contactService.lastMessage(currentContact);
+    console.log('lastMessage contact',this.contactService.lastMessage(currentContact));
+
   }
 }

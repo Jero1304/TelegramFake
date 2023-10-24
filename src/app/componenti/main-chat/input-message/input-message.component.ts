@@ -11,7 +11,7 @@ export class InputMessageComponent {
   constructor(private contactService: ContactService) {}
   onSubmit(messageForm: NgForm) {
     const currentContact = this.contactService.getCurrentContact();
-
+    
     if (currentContact) {
       const currentDate = this.currentDate();
       const newMessage = {
@@ -20,18 +20,26 @@ export class InputMessageComponent {
         status: 'sent',
       };
 
-      console.log('message: messageForm.value.message', messageForm.value.message);
+      console.log(
+        'message: messageForm.value.message',
+        messageForm.value.message
+      );
 
       if (!currentContact.messages) {
         currentContact.messages = [];
       }
 
       currentContact.messages.push(newMessage);
-      console.log('messaggii array:',currentContact.messages);
+      // console.log('messaggii array:', currentContact.messages);
       this.contactService.setCurrentContact(currentContact);
     }
-
     messageForm.reset();
+
+    this.contactService.lastMessage(currentContact);
+    console.log(
+      'this.contactService.lastMessage(currentContact)',
+      this.contactService.lastMessage(currentContact)
+    );
   }
 
   currentDate() {
