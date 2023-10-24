@@ -52,42 +52,17 @@ export class ContactService {
       const messaggiOrdinati = contact.messages
         .slice()
         .sort(
-          (
-            a: { date: string | number | Date },
-            b: { date: string | number | Date }
-          ) => {
+          (a: { date: string | number | Date }, b: { date: string | number | Date }) => {
             const dataMessaggioA = new Date(a.date);
             const dataMessaggioB = new Date(b.date);
             return dataMessaggioB.getTime() - dataMessaggioA.getTime();
           }
         );
-      const lastIndex = messaggiOrdinati.length - 1;
-      return messaggiOrdinati[lastIndex]; // Restituisce il primo messaggio (il più recente)
+        return messaggiOrdinati[0]; // Restituisce l'ultimo messaggio (il più recente)
     } else {
       return null; // Nessun messaggio disponibile
     }
   }
 
-  // public orderContact() {
-  //   const contactsFilter = this.getContacts();
 
-  //   // Sort contacts by the sender of the last message
-  //   contactsFilter.sort((a, b) => {
-  //     const lastMessageA = this.trovaUltimoMessaggio(a);
-  //     const lastMessageB = this.trovaUltimoMessaggio(b);
-
-  //     if (lastMessageA && lastMessageB) {
-  //       return lastMessageB.status.localeCompare(lastMessageA.status);
-  //     } else if (lastMessageA) {
-  //       return -1;
-  //     } else if (lastMessageB) {
-  //       return 1;
-  //     } else {
-  //       return 0;
-  //     }
-  //   });
-  //   console.log('contactsFilter',contactsFilter);
-
-  //   this.filtraContatti$.next(contactsFilter);
-  // }
 }

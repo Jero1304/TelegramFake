@@ -30,16 +30,11 @@ export class InputMessageComponent {
       }
 
       currentContact.messages.push(newMessage);
-      // console.log('messaggii array:', currentContact.messages);
+      console.log('messaggii array:', currentContact.messages);
       this.contactService.setCurrentContact(currentContact);
     }
     messageForm.reset();
-
-    this.contactService.lastMessage(currentContact);
-    console.log(
-      'this.contactService.lastMessage(currentContact)',
-      this.contactService.lastMessage(currentContact)
-    );
+    
   }
 
   currentDate() {
