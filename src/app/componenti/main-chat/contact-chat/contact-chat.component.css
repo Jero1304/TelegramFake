@@ -5,8 +5,11 @@
   margin: 10px;
   color: white;
 
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
 }
 .mex-send {
@@ -26,10 +29,14 @@
 .hour {
   font-size: 14px;
   margin-left: auto;
+  margin-top: auto;
+  align-self: flex-start;
+  justify-self: flex-end;
 }
 .message {
   font-size: 20px;
-  margin-bottom: 6px;
+  margin-right: 16px;
+  margin-bottom: 18px;
 }
 .date-message {
   background-color: var(--obscurePurple);
@@ -40,6 +47,6 @@
   width: 100px;
   margin: 0 auto;
 }
-.date-message:first-child{
+.date-message:first-child {
   margin-top: 10px;
 }
