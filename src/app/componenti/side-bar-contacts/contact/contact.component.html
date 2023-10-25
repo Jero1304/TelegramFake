@@ -16,9 +16,17 @@
     />
     <div class="info">
       <h2 class="name">{{ contact.name }}</h2>
-      <div class="mex-info">
-        <p class="last-mex">{{ lastMex(contact).message }}</p>
-        <p class="last-mex-hour">{{formattaOraMex(contact)}}</p>
+       <div class="mex-info">
+
+        <ng-container *ngIf="lastMex(contact).status === 'sent'; else receivedMessage">
+          <p class="last-mex last-message-sent">Tu: {{ lastMex(contact).message }}</p>
+        </ng-container>
+
+        <ng-template #receivedMessage>
+          <p class="last-mex last-message-received">{{ lastMex(contact).message }}</p>
+        </ng-template>
+
+        <p class="last-mex-hour">{{ formattaOraMex(contact) }}</p>
       </div>
     </div>
   </div>
